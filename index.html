@@ -4,54 +4,117 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Antojados | Sabor Venezolano</title>
+<meta name="description" content="Antojados - El verdadero sabor venezolano. Pedidos por WhatsApp, menú, promociones, ubicación y contacto." />
 <style>
+  :root{
+    --bg:#020b10;
+    --shadow:0 20px 60px rgba(0,0,0,.55);
+  }
   *{box-sizing:border-box}
-  body{margin:0;background:#020b0f;font-family:Arial,sans-serif;display:flex;justify-content:center;}
-  .page{position:relative;width:100%;max-width:520px;background:#020b0f;}
-  .flyer{width:100%;display:block;}
-  a.hotspot{position:absolute;display:block;border-radius:14px;text-indent:-9999px;overflow:hidden;}
-  a.hotspot:focus{outline:3px solid #fff;outline-offset:2px;}
-  .promo{left:6.7%;top:48.0%;width:27.5%;height:3.1%;}
-  .instagram{left:69.5%;top:34.4%;width:23.7%;height:4.3%;}
-  .facebook{left:69.5%;top:39.3%;width:23.7%;height:4.3%;}
-  .tiktok{left:69.5%;top:44.1%;width:23.7%;height:4.3%;}
-  .share{left:68.6%;top:48.8%;width:24.8%;height:3.1%;}
-  .whatsapp-main{left:4.4%;top:53.6%;width:30.1%;height:5.6%;}
-  .call{left:36.0%;top:53.6%;width:27.9%;height:5.6%;}
-  .contact{left:65.4%;top:53.6%;width:30.0%;height:5.6%;}
-  .arepas{left:6.2%;top:64.1%;width:16.3%;height:11.4%;}
-  .tequenos{left:24.4%;top:64.1%;width:16.3%;height:11.4%;}
-  .burgers{left:42.0%;top:64.1%;width:16.3%;height:11.4%;}
-  .cachapas{left:60.0%;top:64.1%;width:16.3%;height:11.4%;}
-  .bebidas{left:78.0%;top:64.1%;width:16.3%;height:11.4%;}
-  .menu{left:35.2%;top:76.4%;width:29.0%;height:3.4%;}
-  .map{left:38.1%;top:88.0%;width:23.0%;height:3.2%;}
-  .whatsapp-float{right:3.8%;bottom:3.3%;width:14.5%;height:9.8%;border-radius:50%;position:absolute;display:block;text-indent:-9999px;}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:radial-gradient(circle at top,#102533 0%,#020b10 55%,#000 100%);
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+  }
+  .page{
+    position:relative;
+    width:min(100vw,520px);
+    margin:0 auto;
+    min-height:100vh;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .design{width:100%;display:block;user-select:none;-webkit-user-drag:none}
+  .tap{
+    position:absolute;
+    display:block;
+    border-radius:18px;
+    text-decoration:none;
+    background:rgba(255,255,255,0);
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    cursor:pointer;
+  }
+  .tap:active{transform:scale(.97);background:rgba(255,255,255,.12)}
+  .tap:focus-visible{outline:3px solid #ffd400;outline-offset:2px;background:rgba(255,255,255,.10)}
+
+  /* Coordenadas sobre el diseño. Se escalan con la imagen. */
+  .promo{left:18%;top:24.9%;width:64%;height:4.1%}
+  .whatsapp-main{left:10%;top:32.3%;width:80%;height:6.2%;border-radius:22px}
+  .call{left:10%;top:39.4%;width:80%;height:5.7%;border-radius:22px}
+  .save{left:10%;top:46%;width:80%;height:5.5%;border-radius:22px}
+  .instagram{left:12%;top:52.8%;width:16%;height:4.2%;border-radius:999px}
+  .facebook{left:31%;top:52.8%;width:16%;height:4.2%;border-radius:999px}
+  .tiktok{left:50%;top:52.8%;width:16%;height:4.2%;border-radius:999px}
+  .share{left:69%;top:52.8%;width:19%;height:4.2%;border-radius:999px}
+  .menu{left:18%;top:70.8%;width:64%;height:4.7%;border-radius:22px}
+  .map{left:18%;top:86.7%;width:64%;height:4.7%;border-radius:22px}
+
+  .float-wa{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:#13b84a;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    font-weight:bold;
+    text-decoration:none;
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+    z-index:10;
+    animation:pulse 1.7s infinite;
+  }
+  @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+  .fallback{
+    position:absolute;
+    left:-9999px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
 </style>
 </head>
 <body>
-<main class="page" aria-label="Antojados - Sabor Venezolano">
-  <img class="flyer" src="antojados-landing.png" alt="Antojados: El verdadero sabor venezolano, menú, promoción y contactos" />
+<main class="page" aria-label="Landing page Antojados">
+  <img class="design" src="antojados-landing.png" alt="Antojados - El verdadero sabor venezolano" />
 
-  <a class="hotspot promo" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20ver%20las%20promociones" aria-label="Ver más promociones">Promociones</a>
-  <a class="hotspot instagram" href="https://www.instagram.com/antojados.ar" aria-label="Abrir Instagram">Instagram</a>
-  <a class="hotspot facebook" href="https://www.facebook.com/Antojados" aria-label="Abrir Facebook">Facebook</a>
-  <a class="hotspot tiktok" href="https://www.tiktok.com/@antojados.ar" aria-label="Abrir TikTok">TikTok</a>
-  <a class="hotspot share" href="https://wa.me/?text=Conoc%C3%A9%20Antojados%20%F0%9F%87%BB%F0%9F%87%AA%20https%3A%2F%2Fdimas21093639-ux.github.io%2F-qr-dinamico%2F" aria-label="Compartir por WhatsApp">Compartir</a>
+  <a class="tap promo" href="#promociones" aria-label="Ver más promociones"></a>
+  <a class="tap whatsapp-main" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20hacer%20un%20pedido" aria-label="Pedir por WhatsApp"></a>
+  <a class="tap call" href="tel:+541158393099" aria-label="Llamar a Antojados"></a>
+  <a class="tap save" href="antojados.vcf" download aria-label="Guardar contacto"></a>
+  <a class="tap instagram" href="https://www.instagram.com/antojados.ar" target="_blank" rel="noopener" aria-label="Abrir Instagram"></a>
+  <a class="tap facebook" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Abrir Facebook"></a>
+  <a class="tap tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="Abrir TikTok"></a>
+  <a class="tap share" href="https://wa.me/?text=Conoc%C3%A9%20Antojados%20-%20El%20verdadero%20sabor%20venezolano%20https%3A%2F%2Fdimas21093639-ux.github.io%2F-qr-dinamico%2F" aria-label="Compartir"></a>
+  <a class="tap menu" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20ver%20el%20men%C3%BA%20completo" aria-label="Ver menú completo"></a>
+  <a class="tap map" href="https://maps.google.com/?q=Av.%20Balbin%201646%20San%20Miguel" target="_blank" rel="noopener" aria-label="Ver ubicación en Google Maps"></a>
 
-  <a class="hotspot whatsapp-main" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20hacer%20un%20pedido" aria-label="Pedir por WhatsApp">WhatsApp</a>
-  <a class="hotspot call" href="tel:+541158393099" aria-label="Llamar a Antojados">Llamar</a>
-  <a class="hotspot contact" href="antojados.vcf" aria-label="Guardar contacto">Guardar contacto</a>
-
-  <a class="hotspot arepas" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Arepas" aria-label="Consultar arepas">Arepas</a>
-  <a class="hotspot tequenos" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Teque%C3%B1os" aria-label="Consultar tequeños">Tequeños</a>
-  <a class="hotspot burgers" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Burgers" aria-label="Consultar burgers">Burgers</a>
-  <a class="hotspot cachapas" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Cachapas" aria-label="Consultar cachapas">Cachapas</a>
-  <a class="hotspot bebidas" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Bebidas" aria-label="Consultar bebidas">Bebidas</a>
-  <a class="hotspot menu" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20ver%20el%20men%C3%BA%20completo" aria-label="Ver menú completo">Menú completo</a>
-
-  <a class="hotspot map" href="https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel" aria-label="Ver ubicación en Google Maps">Mapa</a>
-  <a class="whatsapp-float" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20hacer%20un%20pedido" aria-label="Pedir ahora por WhatsApp">Pedir ahora</a>
+  <section class="fallback" id="promociones">
+    <h1>Antojados</h1>
+    <p>El verdadero sabor venezolano.</p>
+  </section>
 </main>
+<a class="float-wa" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20hacer%20un%20pedido" aria-label="WhatsApp flotante">☏</a>
+<script>
+  const shareButton = document.querySelector('.share');
+  shareButton.addEventListener('click', async (e) => {
+    if (navigator.share) {
+      e.preventDefault();
+      try {
+        await navigator.share({
+          title: 'Antojados',
+          text: 'El verdadero sabor venezolano',
+          url: window.location.href
+        });
+      } catch(err) {}
+    }
+  });
+</script>
 </body>
 </html>
