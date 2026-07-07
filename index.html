@@ -1,10 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi QR Dinámico</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antojados</title>
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#071014;
+  color:white;
+}
+.container{
+  max-width:480px;
+  margin:auto;
+  background:linear-gradient(#111,#071014);
+  padding:20px;
+}
+.logo{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:white;
+  margin-bottom:15px;
+}
+.hero{
+  text-align:left;
+}
+h1{
+  font-size:34px;
+  margin:5px 0;
+}
+h2{
+  color:#ffc400;
+  font-size:38px;
+  margin:0;
+  font-style:italic;
+}
+.subtitle{
+  font-size:20px;
+}
+.card{
+  background:#161f24;
+  border-radius:18px;
+  padding:18px;
+  margin:18px 0;
+  border:1px solid #333;
+}
+.promo{
+  background:linear-gradient(135deg,#c91616,#ff4b1f);
+}
+.price{
+  font-size:38px;
+  color:#ffd21c;
+  font-weight:bold;
+}
+.btn{
+  display:block;
+  text-align:center;
+  padding:15px;
+  margin:12px 0;
+  border-radius:14px;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+  font-size:18px;
+}
+.whatsapp{background:#12b347;}
+.call{background:#075fd1;}
+.yellow{background:#ffc400;color:#111;}
+.red{background:#e32929;}
+.menu{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.item{
+  background:#222;
+  border:1px solid #ffc400;
+  border-radius:14px;
+  padding:15px;
+  text-align:center;
+  font-weight:bold;
+}
+.footer{
+  text-align:center;
+  margin-top:25px;
+  color:#ffc400;
+}
+.flag{
+  height:14px;
+  background:linear-gradient(to bottom,#ffd400 0 33%,#0033a0 33% 66%,#ce1126 66%);
+  margin:25px -20px 10px;
+}
+</style>
 </head>
 <body>
-  <h1>Hola</h1>
-  <p>Este es mi sitio para el QR dinámico.</p>
+
+<div class="container">
+
+  <div class="hero">
+    <img class="logo" src="https://via.placeholder.com/120" alt="Logo Antojados">
+    <h1>EL VERDADERO</h1>
+    <h2>SABOR VENEZOLANO</h2>
+    <p class="subtitle">Hecho con amor, para ti. ❤️</p>
+  </div>
+
+  <div class="card promo">
+    <strong>⭐ PROMOCIÓN DESTACADA</strong>
+    <h2>Combo Antojados</h2>
+    <p>Arepa + Bebida + Tequeños</p>
+    <div class="price">$8.500</div>
+    <a class="btn yellow" href="#">VER MÁS PROMOCIONES ➜</a>
+  </div>
+
+  <a class="btn whatsapp" href="https://wa.me/541158393099">💬 PEDÍ POR WHATSAPP<br>11 5839 3099</a>
+
+  <a class="btn call" href="tel:+541158393099">📞 LLAMAR<br>11 5839 3099</a>
+
+  <a class="btn yellow" href="#">👤 GUARDAR CONTACTO</a>
+
+  <div class="card">
+    <h2 style="text-align:center;">NUESTRO MENÚ</h2>
+    <div class="menu">
+      <div class="item">AREPAS</div>
+      <div class="item">TEQUEÑOS</div>
+      <div class="item">BURGERS</div>
+      <div class="item">CACHAPAS</div>
+      <div class="item">BEBIDAS</div>
+    </div>
+    <a class="btn yellow" href="#">VER MENÚ COMPLETO ➜</a>
+  </div>
+
+  <div class="card">
+    <h3>📅 HORARIOS</h3>
+    <p>A definir luego</p>
+  </div>
+
+  <div class="card">
+    <h3>📍 UBÍCANOS</h3>
+    <p>Av. Balbín 1646,<br>San Miguel</p>
+    <a class="btn red" href="https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel">VER EN EL MAPA</a>
+  </div>
+
+  <div class="card">
+    <h3>🛵 ENVÍOS</h3>
+    <p>Consultá por envíos a domicilio</p>
+  </div>
+
+  <div class="flag"></div>
+
+  <div class="footer">
+    <p>Hecho en Venezuela 💛💙❤️</p>
+    <p>Instagram: @antojados.ar</p>
+  </div>
+
+</div>
+
 </body>
 </html>
