@@ -1,57 +1,239 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Antojados | Sabor Venezolano</title>
+
 <style>
-  *{box-sizing:border-box}
-  body{margin:0;background:#020b0f;font-family:Arial,sans-serif;display:flex;justify-content:center;}
-  .page{position:relative;width:100%;max-width:520px;background:#020b0f;}
-  .flyer{width:100%;display:block;}
-  a.hotspot{position:absolute;display:block;border-radius:14px;text-indent:-9999px;overflow:hidden;}
-  a.hotspot:focus{outline:3px solid #fff;outline-offset:2px;}
-  .promo{left:6.7%;top:48.0%;width:27.5%;height:3.1%;}
-  .instagram{left:69.5%;top:34.4%;width:23.7%;height:4.3%;}
-  .facebook{left:69.5%;top:39.3%;width:23.7%;height:4.3%;}
-  .tiktok{left:69.5%;top:44.1%;width:23.7%;height:4.3%;}
-  .share{left:68.6%;top:48.8%;width:24.8%;height:3.1%;}
-  .whatsapp-main{left:4.4%;top:53.6%;width:30.1%;height:5.6%;}
-  .call{left:36.0%;top:53.6%;width:27.9%;height:5.6%;}
-  .contact{left:65.4%;top:53.6%;width:30.0%;height:5.6%;}
-  .arepas{left:6.2%;top:64.1%;width:16.3%;height:11.4%;}
-  .tequenos{left:24.4%;top:64.1%;width:16.3%;height:11.4%;}
-  .burgers{left:42.0%;top:64.1%;width:16.3%;height:11.4%;}
-  .cachapas{left:60.0%;top:64.1%;width:16.3%;height:11.4%;}
-  .bebidas{left:78.0%;top:64.1%;width:16.3%;height:11.4%;}
-  .menu{left:35.2%;top:76.4%;width:29.0%;height:3.4%;}
-  .map{left:38.1%;top:88.0%;width:23.0%;height:3.2%;}
-  .whatsapp-float{right:3.8%;bottom:3.3%;width:14.5%;height:9.8%;border-radius:50%;position:absolute;display:block;text-indent:-9999px;}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#020b0f;
+  color:white;
+}
+.page{
+  max-width:520px;
+  margin:auto;
+  background:linear-gradient(#071014,#020b0f);
+  padding:18px;
+}
+.hero{
+  text-align:center;
+  padding:20px 10px;
+}
+.logo{
+  width:130px;
+  border-radius:50%;
+  background:white;
+}
+h1{
+  font-size:34px;
+  margin:15px 0 0;
+}
+h2{
+  color:#ffc400;
+  font-size:34px;
+  margin:5px 0;
+  font-style:italic;
+}
+.card{
+  background:#111b20;
+  border:1px solid #29343a;
+  border-radius:22px;
+  padding:18px;
+  margin:16px 0;
+}
+.promo{
+  background:linear-gradient(135deg,#b40000,#ff3b1f);
+}
+.price{
+  font-size:42px;
+  color:#ffd000;
+  font-weight:bold;
+}
+.btn{
+  display:block;
+  text-align:center;
+  padding:15px;
+  border-radius:16px;
+  margin:10px 0;
+  text-decoration:none;
+  font-weight:bold;
+  color:white;
+  font-size:17px;
+}
+.green{background:#13b94f}
+.blue{background:#075bd6}
+.yellow{background:#ffc400;color:#111}
+.red{background:#e62121}
+.social{
+  display:block;
+  background:#0c1418;
+  padding:13px;
+  border-radius:14px;
+  margin:8px 0;
+  color:white;
+  text-decoration:none;
+  border:1px solid #37454c;
+}
+.menu{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.product{
+  border:1px solid #ffc400;
+  border-radius:16px;
+  overflow:hidden;
+  background:#090f12;
+  text-align:center;
+  font-weight:bold;
+}
+.product img{
+  width:100%;
+  height:110px;
+  object-fit:cover;
+  display:block;
+}
+.product span{
+  display:block;
+  padding:10px;
+}
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+.footer{
+  text-align:center;
+  color:#ffc400;
+  padding:20px 0;
+}
+.flag{
+  height:18px;
+  margin:20px -18px 10px;
+  background:linear-gradient(to bottom,#ffd400 0 33%,#0033a0 33% 66%,#ce1126 66%);
+}
+.float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:76px;
+  height:76px;
+  border-radius:50%;
+  background:#13b94f;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:38px;
+  box-shadow:0 0 20px #000;
+}
 </style>
 </head>
+
 <body>
-<main class="page" aria-label="Antojados - Sabor Venezolano">
-  <img class="flyer" src="antojados-landing.png" alt="Antojados: El verdadero sabor venezolano, menú, promoción y contactos" />
 
-  <a class="hotspot promo" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20ver%20las%20promociones" aria-label="Ver más promociones">Promociones</a>
-  <a class="hotspot instagram" href="https://www.instagram.com/antojados.ar" aria-label="Abrir Instagram">Instagram</a>
-  <a class="hotspot facebook" href="https://www.facebook.com/Antojados" aria-label="Abrir Facebook">Facebook</a>
-  <a class="hotspot tiktok" href="https://www.tiktok.com/@antojados.ar" aria-label="Abrir TikTok">TikTok</a>
-  <a class="hotspot share" href="https://wa.me/?text=Conoc%C3%A9%20Antojados%20%F0%9F%87%BB%F0%9F%87%AA%20https%3A%2F%2Fdimas21093639-ux.github.io%2F-qr-dinamico%2F" aria-label="Compartir por WhatsApp">Compartir</a>
+<div class="page">
 
-  <a class="hotspot whatsapp-main" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20hacer%20un%20pedido" aria-label="Pedir por WhatsApp">WhatsApp</a>
-  <a class="hotspot call" href="tel:+541158393099" aria-label="Llamar a Antojados">Llamar</a>
-  <a class="hotspot contact" href="antojados.vcf" aria-label="Guardar contacto">Guardar contacto</a>
+  <section class="hero">
+    <img class="logo" src="antojados-landing.png" alt="Antojados">
+    <h1>EL VERDADERO</h1>
+    <h2>SABOR VENEZOLANO</h2>
+    <p>Hecho con amor, para ti. ❤️</p>
+  </section>
 
-  <a class="hotspot arepas" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Arepas" aria-label="Consultar arepas">Arepas</a>
-  <a class="hotspot tequenos" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Teque%C3%B1os" aria-label="Consultar tequeños">Tequeños</a>
-  <a class="hotspot burgers" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Burgers" aria-label="Consultar burgers">Burgers</a>
-  <a class="hotspot cachapas" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Cachapas" aria-label="Consultar cachapas">Cachapas</a>
-  <a class="hotspot bebidas" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Bebidas" aria-label="Consultar bebidas">Bebidas</a>
-  <a class="hotspot menu" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20ver%20el%20men%C3%BA%20completo" aria-label="Ver menú completo">Menú completo</a>
+  <section class="card promo">
+    <strong>⭐ PROMOCIÓN DESTACADA</strong>
+    <h2>Combo Antojados</h2>
+    <p>Arepa + Bebida + Tequeños</p>
+    <div class="price">$8.500</div>
+    <a class="btn yellow" href="https://wa.me/541158393099?text=Hola,%20quiero%20consultar%20por%20las%20promociones">VER MÁS PROMOCIONES ➜</a>
+  </section>
 
-  <a class="hotspot map" href="https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel" aria-label="Ver ubicación en Google Maps">Mapa</a>
-  <a class="whatsapp-float" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20hacer%20un%20pedido" aria-label="Pedir ahora por WhatsApp">Pedir ahora</a>
-</main>
+  <section>
+    <a class="btn green" href="https://wa.me/541158393099?text=Hola,%20quiero%20hacer%20un%20pedido">💬 PEDÍ POR WHATSAPP<br>11 5839 3099</a>
+    <a class="btn blue" href="tel:+541158393099">📞 LLAMAR<br>11 5839 3099</a>
+    <a class="btn yellow" href="antojados.vcf">👤 GUARDAR CONTACTO</a>
+  </section>
+
+  <section class="card">
+    <h2 style="text-align:center">SÍGUENOS</h2>
+    <a class="social" href="https://instagram.com/antojados.ar">📸 Instagram @antojados.ar</a>
+    <a class="social" href="#">👍 Facebook Antojados</a>
+    <a class="social" href="#">🎵 TikTok @antojados.ar</a>
+    <a class="btn yellow" href="https://wa.me/?text=Te%20comparto%20Antojados:%20https://dimas21093639-ux.github.io/-qr-dinamico/">🔗 COMPARTIR</a>
+  </section>
+
+  <section class="card">
+    <h2 style="text-align:center">NUESTRO MENÚ</h2>
+
+    <div class="menu">
+      <div class="product">
+        <img src="arepa-carne.png" alt="Arepas">
+        <span>AREPAS</span>
+      </div>
+
+      <div class="product">
+        <img src="tequenos.png" alt="Tequeños">
+        <span>TEQUEÑOS</span>
+      </div>
+
+      <div class="product">
+        <img src="empanadas.png" alt="Empanadas">
+        <span>EMPANADAS</span>
+      </div>
+
+      <div class="product">
+        <img src="cachapa.png" alt="Cachapas">
+        <span>CACHAPAS</span>
+      </div>
+
+      <div class="product">
+        <img src="perro-caliente.png" alt="Perros calientes">
+        <span>PERROS</span>
+      </div>
+
+      <div class="product">
+        <img src="pastelitos.png" alt="Pastelitos">
+        <span>PASTELITOS</span>
+      </div>
+    </div>
+
+    <a class="btn yellow" href="https://wa.me/541158393099?text=Hola,%20quiero%20ver%20el%20menú%20completo">VER MENÚ COMPLETO ➜</a>
+  </section>
+
+  <section class="info-grid">
+    <div class="card">
+      <h3>📅 HORARIOS</h3>
+      <p>A definir luego</p>
+    </div>
+
+    <div class="card">
+      <h3>📍 UBÍCANOS</h3>
+      <p>Av. Balbín 1646,<br>San Miguel</p>
+      <a class="btn red" href="https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel">VER EN EL MAPA</a>
+    </div>
+
+    <div class="card">
+      <h3>🛵 ENVÍOS</h3>
+      <p>Consultá por envíos a domicilio</p>
+    </div>
+  </section>
+
+  <div class="flag"></div>
+
+  <footer class="footer">
+    <p>Hecho en Venezuela 💛💙❤️</p>
+    <p>Instagram: @antojados.ar</p>
+  </footer>
+
+</div>
+
+<a class="float" href="https://wa.me/541158393099?text=Hola,%20quiero%20hacer%20un%20pedido">☏</a>
+
 </body>
 </html>
