@@ -4,236 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Antojados | Sabor Venezolano</title>
-
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#020b0f;
-  color:white;
-}
-.page{
-  max-width:520px;
-  margin:auto;
-  background:linear-gradient(#071014,#020b0f);
-  padding:18px;
-}
-.hero{
-  text-align:center;
-  padding:20px 10px;
-}
-.logo{
-  width:130px;
-  border-radius:50%;
-  background:white;
-}
-h1{
-  font-size:34px;
-  margin:15px 0 0;
-}
-h2{
-  color:#ffc400;
-  font-size:34px;
-  margin:5px 0;
-  font-style:italic;
-}
-.card{
-  background:#111b20;
-  border:1px solid #29343a;
-  border-radius:22px;
-  padding:18px;
-  margin:16px 0;
-}
-.promo{
-  background:linear-gradient(135deg,#b40000,#ff3b1f);
-}
-.price{
-  font-size:42px;
-  color:#ffd000;
-  font-weight:bold;
-}
-.btn{
-  display:block;
-  text-align:center;
-  padding:15px;
-  border-radius:16px;
-  margin:10px 0;
-  text-decoration:none;
-  font-weight:bold;
-  color:white;
-  font-size:17px;
-}
-.green{background:#13b94f}
-.blue{background:#075bd6}
-.yellow{background:#ffc400;color:#111}
-.red{background:#e62121}
-.social{
-  display:block;
-  background:#0c1418;
-  padding:13px;
-  border-radius:14px;
-  margin:8px 0;
-  color:white;
-  text-decoration:none;
-  border:1px solid #37454c;
-}
-.menu{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
-.product{
-  border:1px solid #ffc400;
-  border-radius:16px;
-  overflow:hidden;
-  background:#090f12;
-  text-align:center;
-  font-weight:bold;
-}
-.product img{
-  width:100%;
-  height:110px;
-  object-fit:cover;
-  display:block;
-}
-.product span{
-  display:block;
-  padding:10px;
-}
-.info-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:14px;
-}
-.footer{
-  text-align:center;
-  color:#ffc400;
-  padding:20px 0;
-}
-.flag{
-  height:18px;
-  margin:20px -18px 10px;
-  background:linear-gradient(to bottom,#ffd400 0 33%,#0033a0 33% 66%,#ce1126 66%);
-}
-.float{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  width:76px;
-  height:76px;
-  border-radius:50%;
-  background:#13b94f;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  font-size:38px;
-  box-shadow:0 0 20px #000;
-}
+body{margin:0;background:#020b0f;font-family:Arial,sans-serif;display:flex;justify-content:center}
+.page{position:relative;width:100%;max-width:520px}
+.flyer{width:100%;display:block}
+.hotspot{position:absolute;display:block;border-radius:14px;text-indent:-9999px;overflow:hidden}
+.promo{left:6%;top:47.5%;width:31%;height:4%}
+.instagram{left:68%;top:34%;width:26%;height:4.5%}
+.facebook{left:68%;top:39%;width:26%;height:4.5%}
+.tiktok{left:68%;top:44%;width:26%;height:4.5%}
+.share{left:68%;top:49%;width:26%;height:4%}
+.whatsapp{left:6%;top:53.5%;width:30%;height:5.5%}
+.call{left:37%;top:53.5%;width:29%;height:5.5%}
+.contact{left:67%;top:53.5%;width:27%;height:5.5%}
+.menu{left:36%;top:76%;width:30%;height:4%}
+.map{left:40%;top:88%;width:23%;height:4%}
+.float{position:absolute;right:3%;bottom:3%;width:14%;height:9%;border-radius:50%}
 </style>
 </head>
-
 <body>
 
 <div class="page">
+  <img class="flyer" src="antojados-landing.png" alt="Antojados">
 
-  <section class="hero">
-    <img class="logo" src="antojados-landing.png" alt="Antojados">
-    <h1>EL VERDADERO</h1>
-    <h2>SABOR VENEZOLANO</h2>
-    <p>Hecho con amor, para ti. ❤️</p>
-  </section>
+  <a class="hotspot promo" href="https://wa.me/541158393099?text=Hola,%20quiero%20consultar%20por%20las%20promociones">Promociones</a>
 
-  <section class="card promo">
-    <strong>⭐ PROMOCIÓN DESTACADA</strong>
-    <h2>Combo Antojados</h2>
-    <p>Arepa + Bebida + Tequeños</p>
-    <div class="price">$8.500</div>
-    <a class="btn yellow" href="https://wa.me/541158393099?text=Hola,%20quiero%20consultar%20por%20las%20promociones">VER MÁS PROMOCIONES ➜</a>
-  </section>
+  <a class="hotspot instagram" href="https://instagram.com/antojados.ar">Instagram</a>
+  <a class="hotspot facebook" href="#">Facebook</a>
+  <a class="hotspot tiktok" href="#">TikTok</a>
+  <a class="hotspot share" href="https://wa.me/?text=Te%20comparto%20Antojados:%20https://dimas21093639-ux.github.io/-qr-dinamico/">Compartir</a>
 
-  <section>
-    <a class="btn green" href="https://wa.me/541158393099?text=Hola,%20quiero%20hacer%20un%20pedido">💬 PEDÍ POR WHATSAPP<br>11 5839 3099</a>
-    <a class="btn blue" href="tel:+541158393099">📞 LLAMAR<br>11 5839 3099</a>
-    <a class="btn yellow" href="antojados.vcf">👤 GUARDAR CONTACTO</a>
-  </section>
+  <a class="hotspot whatsapp" href="https://wa.me/541158393099?text=Hola,%20quiero%20hacer%20un%20pedido">WhatsApp</a>
+  <a class="hotspot call" href="tel:+541158393099">Llamar</a>
+  <a class="hotspot contact" href="antojados.vcf">Guardar contacto</a>
 
-  <section class="card">
-    <h2 style="text-align:center">SÍGUENOS</h2>
-    <a class="social" href="https://instagram.com/antojados.ar">📸 Instagram @antojados.ar</a>
-    <a class="social" href="#">👍 Facebook Antojados</a>
-    <a class="social" href="#">🎵 TikTok @antojados.ar</a>
-    <a class="btn yellow" href="https://wa.me/?text=Te%20comparto%20Antojados:%20https://dimas21093639-ux.github.io/-qr-dinamico/">🔗 COMPARTIR</a>
-  </section>
-
-  <section class="card">
-    <h2 style="text-align:center">NUESTRO MENÚ</h2>
-
-    <div class="menu">
-      <div class="product">
-        <img src="arepa-carne.png" alt="Arepas">
-        <span>AREPAS</span>
-      </div>
-
-      <div class="product">
-        <img src="tequenos.png" alt="Tequeños">
-        <span>TEQUEÑOS</span>
-      </div>
-
-      <div class="product">
-        <img src="empanadas.png" alt="Empanadas">
-        <span>EMPANADAS</span>
-      </div>
-
-      <div class="product">
-        <img src="cachapa.png" alt="Cachapas">
-        <span>CACHAPAS</span>
-      </div>
-
-      <div class="product">
-        <img src="perro-caliente.png" alt="Perros calientes">
-        <span>PERROS</span>
-      </div>
-
-      <div class="product">
-        <img src="pastelitos.png" alt="Pastelitos">
-        <span>PASTELITOS</span>
-      </div>
-    </div>
-
-    <a class="btn yellow" href="https://wa.me/541158393099?text=Hola,%20quiero%20ver%20el%20menú%20completo">VER MENÚ COMPLETO ➜</a>
-  </section>
-
-  <section class="info-grid">
-    <div class="card">
-      <h3>📅 HORARIOS</h3>
-      <p>A definir luego</p>
-    </div>
-
-    <div class="card">
-      <h3>📍 UBÍCANOS</h3>
-      <p>Av. Balbín 1646,<br>San Miguel</p>
-      <a class="btn red" href="https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel">VER EN EL MAPA</a>
-    </div>
-
-    <div class="card">
-      <h3>🛵 ENVÍOS</h3>
-      <p>Consultá por envíos a domicilio</p>
-    </div>
-  </section>
-
-  <div class="flag"></div>
-
-  <footer class="footer">
-    <p>Hecho en Venezuela 💛💙❤️</p>
-    <p>Instagram: @antojados.ar</p>
-  </footer>
-
+  <a class="hotspot menu" href="https://wa.me/541158393099?text=Hola,%20quiero%20ver%20el%20menú%20completo">Menú</a>
+  <a class="hotspot map" href="https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel">Mapa</a>
+  <a class="hotspot float" href="https://wa.me/541158393099?text=Hola,%20quiero%20hacer%20un%20pedido">Pedir ahora</a>
 </div>
-
-<a class="float" href="https://wa.me/541158393099?text=Hola,%20quiero%20hacer%20un%20pedido">☏</a>
 
 </body>
 </html>
