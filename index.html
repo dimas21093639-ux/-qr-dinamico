@@ -12,13 +12,37 @@ body{margin:0;background:#020b0f;display:flex;justify-content:center;font-family
 .hotspot{position:absolute;display:block;border-radius:14px;text-indent:-9999px;overflow:hidden}
 .hotspot:focus{outline:3px solid #fff;outline-offset:2px}
 
-/* PROMOCIÓN EDITABLE - SOLO TEXTO */
-.promo-badge{position:absolute;left:6.5%;top:32.2%;z-index:5;background:#ffc400;color:#111;border-radius:999px;padding:0.7% 1.5%;font-size:2.5vw;font-weight:900}
-.promo-title{position:absolute;left:6.8%;top:35.7%;width:45%;z-index:5;color:#fff;font-size:5.5vw;line-height:.95;font-weight:900;font-style:italic;text-shadow:0 2px 3px #000}
-.promo-desc{position:absolute;left:6.8%;top:41.2%;width:46%;z-index:5;color:#fff;font-size:3.1vw;line-height:1.15;text-shadow:0 2px 3px #000}
-.promo-price{position:absolute;left:6.8%;top:44.8%;z-index:5;color:#ffc400;font-size:6.8vw;font-weight:900;text-shadow:0 2px 3px #000}
-.promo-button{position:absolute;left:6.8%;top:49.35%;width:28%;z-index:5;background:#ffc400;color:#111;border-radius:999px;padding:1.05% 1%;font-size:2.55vw;font-weight:900;text-align:center}
-@media(min-width:520px){.promo-badge{font-size:13px}.promo-title{font-size:28px}.promo-desc{font-size:16px}.promo-price{font-size:35px}.promo-button{font-size:13px}}
+/* PROMO: SOLO EL TEXTO IZQUIERDO ES EDITABLE */
+.promo-badge{
+  position:absolute;left:7.0%;top:32.3%;z-index:5;
+  background:#ffc400;color:#111;border-radius:999px;
+  padding:0.65% 1.35%;font-size:2.35vw;font-weight:900;
+}
+.promo-title{
+  position:absolute;left:6.8%;top:35.5%;width:31%;z-index:5;
+  color:#fff;font-size:5.0vw;line-height:.94;font-weight:900;
+  font-style:italic;text-shadow:0 2px 3px #000;
+}
+.promo-desc{
+  position:absolute;left:6.9%;top:41.0%;width:31%;z-index:5;
+  color:#fff;font-size:2.85vw;line-height:1.15;text-shadow:0 2px 3px #000;
+}
+.promo-price{
+  position:absolute;left:6.9%;top:44.1%;z-index:5;
+  color:#ffc400;font-size:6.1vw;font-weight:900;text-shadow:0 2px 3px #000;
+}
+.promo-button{
+  position:absolute;left:6.9%;top:49.0%;width:25.5%;z-index:5;
+  background:#ffc400;color:#111;border-radius:999px;
+  padding:0.95% .8%;font-size:2.25vw;font-weight:900;text-align:center;
+}
+@media(min-width:520px){
+ .promo-badge{font-size:12px}
+ .promo-title{font-size:26px}
+ .promo-desc{font-size:15px}
+ .promo-price{font-size:32px}
+ .promo-button{font-size:12px}
+}
 
 /* ZONAS CLICKEABLES */
 .promo{left:6.7%;top:48.0%;width:27.5%;height:3.1%}
