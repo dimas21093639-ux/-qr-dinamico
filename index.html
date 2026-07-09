@@ -6,126 +6,168 @@
 <title>Antojados | Sabor Venezolano</title>
 <style>
 :root{
-  --bg:#02090d; --card:#101a1f; --line:#27363d; --yellow:#ffc400;
-  --blue:#073ba8; --red:#e32222; --green:#12b84c; --white:#fff;
+  --bg:#02090d;--card:#101a1f;--line:#2b3a42;--yellow:#ffc400;
+  --red:#ed2118;--green:#11b84d;--blue:#075bd6;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:white}
+body{margin:0;background:#02090d;color:#fff;font-family:Arial,Helvetica,sans-serif}
 a{-webkit-tap-highlight-color:transparent}
-.wrap{max-width:520px;margin:auto;background:radial-gradient(circle at top,#17252b 0,#02090d 48%);min-height:100vh;overflow:hidden}
-.hero{position:relative;padding:22px 18px 18px;background:linear-gradient(180deg,#141414,#061014)}
-.hero:after{content:"";position:absolute;left:-20%;right:-20%;bottom:-12px;height:28px;border-top:5px solid var(--yellow);border-radius:50%}
-.logo{width:112px;height:112px;border-radius:50%;background:#fff;margin-bottom:10px;object-fit:cover;border:3px solid white}
-.hero-food{position:absolute;right:-55px;top:12px;width:300px;opacity:.95;filter:drop-shadow(0 10px 18px #000)}
-.hero-text{position:relative;z-index:2;max-width:340px}
-.kicker{font-size:30px;font-weight:900;letter-spacing:-1px;margin:8px 0 0}
-.title{font-size:39px;line-height:.95;font-weight:900;color:var(--yellow);font-style:italic;text-shadow:0 3px 0 #000;margin:6px 0}
-.sub{font-size:18px;margin:14px 0 0}
-.flag-brush{position:absolute;right:-25px;bottom:16px;width:230px;height:78px;transform:rotate(-8deg);background:linear-gradient(165deg,#ffd400 0 32%,#0636a8 32% 64%,#d71920 64%);clip-path:polygon(0 20%,100% 0,88% 80%,8% 100%);opacity:.9}
-.section{padding:14px 18px}
-.grid-top{display:grid;grid-template-columns:2fr 1fr;gap:12px}
-.card{background:linear-gradient(180deg,#142026,#0b1216);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 24px rgba(0,0,0,.28)}
-.promo{padding:16px;background:linear-gradient(135deg,#bd0909,#ff321f);position:relative;overflow:hidden}
-.badge{display:inline-block;background:var(--yellow);color:#111;font-weight:900;padding:7px 12px;border-radius:999px;font-size:12px}
-.promo h2{font-size:30px;line-height:1;margin:16px 0 8px;font-style:italic}
-.promo p{font-size:17px;margin:0 0 12px}
-.price{font-size:38px;font-weight:900;color:var(--yellow);margin:8px 0}
-.btn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border-radius:14px;font-weight:900;text-align:center;padding:14px;color:white;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 7px 14px rgba(0,0,0,.22)}
-.btn:active{transform:scale(.98)}
-.yellow{background:var(--yellow);color:#111}.green{background:var(--green)}.blue{background:#075bd6}.red{background:var(--red)}
-.social-card{padding:14px}
-.social-card h3,.menu-card h3{color:var(--yellow);font-size:21px;margin:0 0 12px}
-.social{display:flex;align-items:center;gap:9px;border:1px solid #43535b;background:#0a1115;color:white;text-decoration:none;padding:10px;border-radius:13px;margin:7px 0;font-weight:700}
-.social small{display:block;font-weight:400;font-size:12px;color:#ddd}
-.actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:0 18px 14px}
-.actions .btn{min-height:64px;font-size:14px;line-height:1.2}
-.menu-card{padding:16px;margin:0 18px 14px}
-.menu-title{text-align:center;color:var(--yellow);font-size:27px;font-weight:900;margin:0 0 14px}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.product{background:#090f12;border:1px solid #d99d00;border-radius:14px;overflow:hidden;text-align:center;color:white;text-decoration:none;font-weight:900}
-.product img{width:100%;height:86px;object-fit:cover;display:block}
-.product span{display:block;padding:8px 4px;font-size:12px}
-.info{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:0 18px 18px}
-.info .card{padding:14px;min-height:128px}
-.info h3{margin:0 0 10px;font-size:16px;color:var(--yellow)}
-.info p{font-size:14px;line-height:1.35}
-.footer-flag{height:56px;margin:8px 0 0;background:linear-gradient(to bottom,#ffd400 0 33%,#0636a8 33% 66%,#d71920 66%);display:flex;align-items:center;justify-content:center;font-size:25px;font-family:cursive;text-shadow:0 2px 5px #000}
-.foot{text-align:center;padding:14px 14px 26px;color:white;font-size:14px}
-.float{position:fixed;right:15px;bottom:15px;width:76px;height:76px;border-radius:50%;background:var(--green);color:white;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:40px;box-shadow:0 9px 25px #000;z-index:9;border:4px solid rgba(255,255,255,.18)}
-.float-label{position:fixed;right:8px;bottom:4px;background:#fff;color:#111;font-weight:900;font-size:11px;border-radius:20px;padding:6px 10px;z-index:10}
+.app{max-width:720px;margin:auto;background:#071014;min-height:100vh;position:relative;overflow:hidden}
+.hero{position:relative;height:330px;padding:26px 28px;background:linear-gradient(180deg,#111,#061014);overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,196,0,.16),transparent 35%);z-index:0}
+.logo{position:absolute;z-index:3;top:20px;left:30px;width:126px;height:126px;border-radius:50%;border:5px solid #fff;object-fit:cover;background:#fff;box-shadow:0 8px 18px #000}
+.hero-food{position:absolute;right:-12px;top:20px;width:405px;height:245px;object-fit:cover;object-position:center;filter:drop-shadow(0 15px 20px #000);z-index:1;border-radius:0 0 0 120px}
+.hero-text{position:absolute;z-index:4;left:28px;bottom:48px;right:20px}
+.hero-text .one{font-size:36px;font-weight:900;letter-spacing:-1px;text-shadow:0 4px 5px #000}
+.hero-text .two{font-size:46px;line-height:.9;font-weight:900;font-style:italic;color:var(--yellow);text-shadow:0 4px 0 #000}
+.hero-text p{font-size:21px;margin:16px 0 0;text-shadow:0 2px 4px #000}
+.brush{position:absolute;z-index:2;right:-30px;bottom:38px;width:300px;height:105px;transform:rotate(-9deg);background:linear-gradient(165deg,#ffd400 0 33%,#0636a8 33% 66%,#d71920 66%);clip-path:polygon(0 20%,100% 0,90% 82%,6% 100%);box-shadow:0 6px 15px #000}
+.curve{position:absolute;left:-12%;right:-12%;bottom:8px;height:30px;border-top:5px solid var(--yellow);border-radius:50%;z-index:5}
+
+.main{padding:18px}
+.grid-top{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#111c22,#081014);box-shadow:0 12px 24px rgba(0,0,0,.35)}
+.promo{min-height:250px;padding:18px;background:linear-gradient(135deg,#b80000,#ff2e20);position:relative;overflow:hidden}
+.badge{display:inline-flex;align-items:center;gap:5px;background:var(--yellow);color:#111;border-radius:999px;font-weight:900;padding:8px 12px;font-size:14px}
+.promo h2{font-size:38px;font-style:italic;margin:22px 0 10px;line-height:.95;text-shadow:0 3px 3px #000}
+.promo p{font-size:20px;margin:0 0 12px}
+.price{font-size:48px;color:var(--yellow);font-weight:900;margin:8px 0 18px;text-shadow:0 3px 3px #000}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;text-align:center;border-radius:15px;padding:15px 12px;font-weight:900;color:#fff;line-height:1.15;box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 7px 15px rgba(0,0,0,.3)}
+.btn:active{transform:scale(.97)}
+.yellow{background:var(--yellow);color:#111}.green{background:var(--green)}.blue{background:var(--blue)}.red{background:var(--red)}
+.socials{padding:16px}
+.socials h3{color:var(--yellow);font-size:25px;margin:0 0 14px}
+.social{display:flex;align-items:center;gap:10px;background:#0a1115;border:1px solid #3b4a52;border-radius:14px;color:#fff;text-decoration:none;padding:12px;margin:8px 0;font-weight:900}
+.social .ico{font-size:28px}.social small{display:block;color:#ddd;font-weight:400;font-size:13px}
+
+.actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:16px 0}
+.actions .btn{min-height:70px;font-size:16px}
+.menu-card{padding:18px;margin-bottom:16px}
+.menu-title{text-align:center;color:var(--yellow);font-size:31px;font-weight:900;margin:0 0 18px}
+.products{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.product{border:1px solid #d99d00;background:#090f12;border-radius:15px;overflow:hidden;color:#fff;text-align:center;text-decoration:none;font-weight:900}
+.product img{width:100%;height:100px;object-fit:cover;display:block}
+.product span{display:block;padding:10px 4px;font-size:14px}
+.info{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:12px}
+.info .card{padding:18px;min-height:140px}
+.info h3{margin:0 0 12px;font-size:20px;color:var(--yellow)}
+.info p{font-size:16px;line-height:1.35;margin:0 0 14px}
+.flag{height:70px;margin:8px -18px 0;background:linear-gradient(to bottom,#ffd400 0 33%,#0636a8 33% 66%,#d71920 66%);display:flex;align-items:center;justify-content:center;font-family:cursive;font-size:32px;text-shadow:0 2px 5px #000}
+.footer{text-align:center;padding:14px 10px 24px;font-size:16px}
+.float{position:fixed;right:22px;bottom:22px;width:86px;height:86px;border-radius:50%;background:var(--green);color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:48px;border:5px solid rgba(255,255,255,.2);box-shadow:0 10px 28px #000;z-index:50}
+.float-label{position:fixed;right:14px;bottom:5px;background:#fff;color:#111;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:900;z-index:51}
+.maintenance{display:none;max-width:720px;margin:auto;min-height:100vh;background:linear-gradient(180deg,#071014,#02090d);align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:30px}
+.maintenance h1{color:var(--yellow);font-size:38px;margin:0 0 10px}.maintenance p{font-size:19px;line-height:1.4}
+@media(max-width:600px){
+  .app{max-width:520px}
+  .hero{height:330px;padding:20px 18px}
+  .logo{width:96px;height:96px;left:22px;top:18px}
+  .hero-food{width:315px;height:210px;right:-70px;top:34px}
+  .hero-text{left:22px;bottom:50px}
+  .hero-text .one{font-size:30px}
+  .hero-text .two{font-size:38px}
+  .hero-text p{font-size:18px}
+  .brush{width:245px;height:80px;right:-35px}
+  .main{padding:14px}
+  .grid-top{grid-template-columns:2fr 1fr;gap:10px}
+  .promo{min-height:245px;padding:14px}
+  .promo h2{font-size:30px}.promo p{font-size:17px}.price{font-size:40px}
+  .socials{padding:12px}.socials h3{font-size:21px}.social{padding:9px}.social .ico{font-size:22px}
+  .actions{gap:10px}.actions .btn{font-size:13px;min-height:62px}
+  .products{grid-template-columns:repeat(3,1fr);gap:10px}.product img{height:84px}.product span{font-size:12px}
+  .info{grid-template-columns:1fr;gap:10px}.info .card{min-height:auto}
+}
 @media(max-width:430px){
- .hero-food{width:250px;right:-90px;top:40px}.title{font-size:34px}.kicker{font-size:26px}
- .grid-top{grid-template-columns:1fr}.social-card{order:2}.actions{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,1fr)}.info{grid-template-columns:1fr}
+  .grid-top{grid-template-columns:1fr}.actions{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-
-<header class="hero">
-  <img class="hero-food" src="img/hero-arepa.png" alt="Arepa">
-  <div class="flag-brush"></div>
-  <div class="hero-text">
-    <img class="logo" src="img/arepa-carne.png" alt="Antojados">
-    <div class="kicker">EL VERDADERO</div>
-    <div class="title">SABOR VENEZOLANO</div>
-    <p class="sub">Hecho con amor, para ti. ❤️</p>
-  </div>
-</header>
-
-<section class="section grid-top">
-  <div class="card promo">
-    <div class="badge">⭐ PROMOCIÓN DESTACADA</div>
-    <h2>Combo Antojados</h2>
-    <p>Arepa + Bebida + Tequeños</p>
-    <div class="price">$8.500</div>
-    <a class="btn yellow" href="https://wa.me/541158393099?text=Hola,%20quiero%20consultar%20por%20las%20promociones">VER MÁS PROMOCIONES ➜</a>
-  </div>
-
-  <div class="card social-card">
-    <h3>SÍGUENOS</h3>
-    <a class="social" href="https://instagram.com/antojados.ar">📸 <span>Instagram<small>@antojados.ar</small></span></a>
-    <a class="social" href="#">👍 <span>Facebook<small>Antojados</small></span></a>
-    <a class="social" href="#">🎵 <span>TikTok<small>@antojados.ar</small></span></a>
-    <a class="btn yellow" href="https://wa.me/?text=Te%20comparto%20Antojados:%20https://dimas21093639-ux.github.io/-qr-dinamico/">🔗 COMPARTIR</a>
-  </div>
-</section>
-
-<section class="actions">
-  <a class="btn green" href="https://wa.me/541158393099?text=Hola,%20quiero%20hacer%20un%20pedido">💬 PEDÍ POR WHATSAPP<br>11 5839 3099</a>
-  <a class="btn blue" href="tel:+541158393099">📞 LLAMAR<br>11 5839 3099</a>
-  <a class="btn yellow" href="antojados.vcf">👤 GUARDAR CONTACTO</a>
-</section>
-
-<section class="card menu-card" id="menu">
-  <h3 class="menu-title">NUESTRO MENÚ</h3>
-  <div class="products">
-    <a class="product" href="https://wa.me/541158393099?text=Hola,%20quiero%20una%20arepa%20de%20carne%20mechada"><img src="img/arepa-carne.png"><span>CARNE MECHADA</span></a>
-    <a class="product" href="https://wa.me/541158393099?text=Hola,%20quiero%20una%20arepa%20de%20pollo"><img src="img/arepa-pollo.png"><span>POLLO</span></a>
-    <a class="product" href="https://wa.me/541158393099?text=Hola,%20quiero%20una%20arepa%20de%20pernil"><img src="img/arepa-pernil.png"><span>PERNIL</span></a>
-    <a class="product" href="https://wa.me/541158393099?text=Hola,%20quiero%20tequeños"><img src="img/tequenos.png"><span>TEQUEÑOS</span></a>
-    <a class="product" href="https://wa.me/541158393099?text=Hola,%20quiero%20empanadas"><img src="img/empanadas.png"><span>EMPANADAS</span></a>
-    <a class="product" href="https://wa.me/541158393099?text=Hola,%20quiero%20pastelitos"><img src="img/pastelitos.png"><span>PASTELITOS</span></a>
-    <a class="product" href="https://wa.me/541158393099?text=Hola,%20quiero%20una%20cachapa"><img src="img/cachapa.png"><span>CACHAPAS</span></a>
-    <a class="product" href="https://wa.me/541158393099?text=Hola,%20quiero%20un%20perro%20caliente"><img src="img/perro-caliente.png"><span>PERROS</span></a>
-  </div>
-  <br>
-  <a class="btn yellow" href="https://wa.me/541158393099?text=Hola,%20quiero%20ver%20el%20menú%20completo">VER MENÚ COMPLETO ➜</a>
-</section>
-
-<section class="info">
-  <div class="card"><h3>📅 HORARIOS</h3><p>A definir luego</p></div>
-  <div class="card"><h3>📍 UBÍCANOS</h3><p>Av. Balbín 1646,<br>San Miguel</p><a class="btn red" href="https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel">VER MAPA</a></div>
-  <div class="card"><h3>🛵 ENVÍOS</h3><p>Consultá por envíos a domicilio</p></div>
-</section>
-
-<div class="footer-flag">Hecho en Venezuela 💛💙❤️</div>
-<div class="foot">📸 Antojados.ar &nbsp; | &nbsp; 💛 Gracias por apoyarnos</div>
-
+<div class="maintenance" id="maintenance">
+  <h1>🔧 Servicio técnico</h1>
+  <p id="maintenanceText">Estamos realizando mejoras. Volvemos en unos minutos.</p>
+  <a class="btn green" id="maintenanceWhatsapp" href="#">💬 Pedir por WhatsApp</a>
 </div>
 
-<a class="float" href="https://wa.me/541158393099?text=Hola,%20quiero%20hacer%20un%20pedido">☏</a>
+<div class="app" id="site">
+  <header class="hero">
+    <img class="logo" src="img/arepa-carne.png" alt="Antojados">
+    <img class="hero-food" src="img/hero-arepa.png" alt="Arepa venezolana">
+    <div class="brush"></div>
+    <div class="hero-text">
+      <div class="one">EL VERDADERO</div>
+      <div class="two">SABOR VENEZOLANO</div>
+      <p>Hecho con amor, para ti. ❤️</p>
+    </div>
+    <div class="curve"></div>
+  </header>
+
+  <main class="main">
+    <section class="grid-top">
+      <div class="card promo">
+        <div class="badge">⭐ PROMOCIÓN DESTACADA</div>
+        <h2 id="promoTitulo">Combo Antojados</h2>
+        <p id="promoDescripcion">Arepa + Bebida + Tequeños</p>
+        <div class="price" id="promoPrecio">$8.500</div>
+        <a class="btn yellow" id="promoBtn" href="#">VER MÁS PROMOCIONES ➜</a>
+      </div>
+
+      <div class="card socials">
+        <h3>SÍGUENOS</h3>
+        <a class="social" id="instagramUrl" href="#"><span class="ico">📸</span><span>Instagram<small id="instagram">@antojados.ar</small></span></a>
+        <a class="social" id="facebookUrl" href="#"><span class="ico">👍</span><span>Facebook<small id="facebook">Antojados</small></span></a>
+        <a class="social" id="tiktokUrl" href="#"><span class="ico">🎵</span><span>TikTok<small id="tiktok">@antojados.ar</small></span></a>
+        <a class="btn yellow" id="shareBtn" href="#">🔗 COMPARTIR</a>
+      </div>
+    </section>
+
+    <section class="actions">
+      <a class="btn green" id="whatsappBtn" href="#">💬 PEDÍ POR WHATSAPP<br><span id="telefono1">11 5839 3099</span></a>
+      <a class="btn blue" id="callBtn" href="#">📞 LLAMAR<br><span id="telefono2">11 5839 3099</span></a>
+      <a class="btn yellow" href="antojados.vcf">👤 GUARDAR CONTACTO</a>
+    </section>
+
+    <section class="card menu-card">
+      <h2 class="menu-title">NUESTRO MENÚ</h2>
+      <div class="products">
+        <a class="product" id="arepaLink" href="#"><img src="img/arepa-carne.png"><span>AREPAS</span></a>
+        <a class="product" id="tequenosLink" href="#"><img src="img/tequenos.png"><span>TEQUEÑOS</span></a>
+        <a class="product" id="empanadasLink" href="#"><img src="img/empanadas.png"><span>EMPANADAS</span></a>
+        <a class="product" id="cachapaLink" href="#"><img src="img/cachapa.png"><span>CACHAPAS</span></a>
+        <a class="product" id="perroLink" href="#"><img src="img/perro-caliente.png"><span>PERROS</span></a>
+      </div>
+      <br>
+      <a class="btn yellow" id="menuCompleto" href="#">VER MENÚ COMPLETO ➜</a>
+    </section>
+
+    <section class="info">
+      <div class="card"><h3>📅 HORARIOS</h3><p id="horarios">A definir luego</p></div>
+      <div class="card"><h3>📍 UBÍCANOS</h3><p id="direccion">Av. Balbín 1646,<br>San Miguel</p><a class="btn red" id="mapaBtn" href="#">VER EN EL MAPA</a></div>
+      <div class="card"><h3>🛵 ENVÍOS</h3><p id="envios">Consultá por envíos a domicilio</p></div>
+    </section>
+
+    <div class="flag">Hecho en Venezuela 💛💙❤️</div>
+    <footer class="footer">📸 Antojados.ar &nbsp; | &nbsp; 💛 Gracias por apoyarnos</footer>
+  </main>
+</div>
+
+<a class="float" id="floatWhatsapp" href="#">☏</a>
 <div class="float-label">PEDÍ AHORA</div>
+
+<script>
+const defaultData={servicioTecnico:false,mensajeServicio:"Estamos realizando mejoras. Volvemos en unos minutos.",promo:{titulo:"Combo Antojados",descripcion:"Arepa + Bebida + Tequeños",precio:"$8.500"},telefono:"11 5839 3099",telefonoLink:"+541158393099",whatsapp:"5491158393099",instagram:"@antojados.ar",instagramUrl:"https://instagram.com/antojados.ar",facebook:"Antojados",facebookUrl:"#",tiktok:"@antojados.ar",tiktokUrl:"#",direccion:"Av. Balbín 1646, San Miguel",mapaUrl:"https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel",horarios:"A definir luego",envios:"Consultá por envíos a domicilio"};
+function wa(n,t){return `https://wa.me/${n}?text=${encodeURIComponent(t)}`}
+function applyData(d){const data={...defaultData,...d,promo:{...defaultData.promo,...(d.promo||{})}};
+if(data.servicioTecnico){document.getElementById("site").style.display="none";document.getElementById("maintenance").style.display="flex";document.getElementById("maintenanceText").textContent=data.mensajeServicio;document.getElementById("maintenanceWhatsapp").href=wa(data.whatsapp,"Hola, quiero hacer un pedido.")}
+document.getElementById("promoTitulo").textContent=data.promo.titulo;document.getElementById("promoDescripcion").textContent=data.promo.descripcion;document.getElementById("promoPrecio").textContent=data.promo.precio;
+document.getElementById("telefono1").textContent=data.telefono;document.getElementById("telefono2").textContent=data.telefono;document.getElementById("callBtn").href=`tel:${data.telefonoLink}`;
+document.getElementById("instagram").textContent=data.instagram;document.getElementById("facebook").textContent=data.facebook;document.getElementById("tiktok").textContent=data.tiktok;document.getElementById("instagramUrl").href=data.instagramUrl;document.getElementById("facebookUrl").href=data.facebookUrl;document.getElementById("tiktokUrl").href=data.tiktokUrl;
+document.getElementById("direccion").innerHTML=data.direccion.replace(", ","<br>");document.getElementById("horarios").textContent=data.horarios;document.getElementById("envios").textContent=data.envios;document.getElementById("mapaBtn").href=data.mapaUrl;
+document.getElementById("whatsappBtn").href=wa(data.whatsapp,"Hola, quiero hacer un pedido.");document.getElementById("floatWhatsapp").href=wa(data.whatsapp,"Hola, quiero hacer un pedido.");document.getElementById("promoBtn").href=wa(data.whatsapp,"Hola, quiero consultar por las promociones.");document.getElementById("menuCompleto").href=wa(data.whatsapp,"Hola, quiero ver el menú completo.");
+document.getElementById("arepaLink").href=wa(data.whatsapp,"Hola, quiero consultar por las arepas.");document.getElementById("tequenosLink").href=wa(data.whatsapp,"Hola, quiero consultar por los tequeños.");document.getElementById("empanadasLink").href=wa(data.whatsapp,"Hola, quiero consultar por las empanadas.");document.getElementById("cachapaLink").href=wa(data.whatsapp,"Hola, quiero consultar por las cachapas.");document.getElementById("perroLink").href=wa(data.whatsapp,"Hola, quiero consultar por los perros calientes.");
+document.getElementById("shareBtn").href=`https://wa.me/?text=${encodeURIComponent("Te comparto Antojados: https://dimas21093639-ux.github.io/-qr-dinamico/")}`}
+fetch("datos.json?nocache="+Date.now()).then(r=>r.json()).then(applyData).catch(()=>applyData(defaultData));
+</script>
 </body>
 </html>
