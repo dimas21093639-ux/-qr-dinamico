@@ -6,36 +6,34 @@
 <title>Antojados | Sabor Venezolano</title>
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  background:#020b0f;
-  display:flex;
-  justify-content:center;
-  font-family:Arial, sans-serif;
+body{margin:0;background:#020b0f;display:flex;justify-content:center;font-family:Arial,sans-serif}
+.page{position:relative;width:100%;max-width:520px;background:#020b0f}
+.flyer{width:100%;display:block}
+.hotspot{position:absolute;display:block;border-radius:14px;text-indent:-9999px;overflow:hidden}
+.hotspot:focus{outline:3px solid #fff;outline-offset:2px}
+
+/* PROMOCIÓN EDITABLE */
+.promo-editable{
+  position:absolute;left:4.7%;top:34.3%;width:44.5%;height:17.7%;
+  background:linear-gradient(135deg,#b60000,#ff3a22);
+  border-radius:18px;padding:3.1%;color:white;
+  box-shadow:0 8px 18px rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.18);overflow:hidden;
 }
-.page{
-  position:relative;
-  width:100%;
-  max-width:520px;
-  background:#020b0f;
-}
-.flyer{
-  width:100%;
-  display:block;
-}
-.hotspot{
-  position:absolute;
-  display:block;
-  border-radius:14px;
-  text-indent:-9999px;
-  overflow:hidden;
-}
-.hotspot:focus{
-  outline:3px solid #fff;
-  outline-offset:2px;
+.promo-badge{display:inline-block;background:#ffc400;color:#111;font-weight:900;font-size:12px;padding:5px 8px;border-radius:999px}
+.promo-editable h2{margin:10px 0 4px;font-size:28px;line-height:.95;font-style:italic;font-weight:900;text-shadow:0 2px 2px #000}
+.promo-editable p{margin:0;font-size:16px;line-height:1.15}
+.promo-price{margin:5px 0 6px;color:#ffc400;font-size:36px;font-weight:900;text-shadow:0 2px 2px #000}
+.promo-editable .mini-btn{position:absolute;left:8%;right:8%;bottom:8%;background:#ffc400;color:#111;border-radius:12px;padding:8px 5px;font-size:14px;font-weight:900;text-align:center}
+@media(max-width:520px){
+  .promo-badge{font-size:2.3vw;padding:1vw 1.5vw}
+  .promo-editable h2{font-size:5.35vw;margin:1.7vw 0 .7vw}
+  .promo-editable p{font-size:3.05vw}
+  .promo-price{font-size:6.9vw;margin:1vw 0}
+  .promo-editable .mini-btn{font-size:2.65vw;padding:1.5vw .8vw}
 }
 
-/* ZONAS CLICKEABLES SOBRE EL DISEÑO */
+/* ZONAS CLICKEABLES */
 .promo{left:6.7%;top:48.0%;width:27.5%;height:3.1%}
 .instagram{left:69.5%;top:34.4%;width:23.7%;height:4.3%}
 .facebook{left:69.5%;top:39.3%;width:23.7%;height:4.3%}
@@ -51,41 +49,34 @@ body{
 .bebidas{left:78.0%;top:64.1%;width:16.3%;height:11.4%}
 .menu{left:35.2%;top:76.4%;width:29.0%;height:3.4%}
 .map{left:38.1%;top:88.0%;width:23.0%;height:3.2%}
-.whatsapp-float{
-  right:3.8%;
-  bottom:3.3%;
-  width:14.5%;
-  height:9.8%;
-  border-radius:50%;
-  position:absolute;
-  display:block;
-  text-indent:-9999px;
-  overflow:hidden;
-}
+.whatsapp-float{right:3.8%;bottom:3.3%;width:14.5%;height:9.8%;border-radius:50%;position:absolute;display:block;text-indent:-9999px;overflow:hidden}
 </style>
 </head>
 <body>
-
 <main class="page" aria-label="Antojados - Sabor Venezolano">
-  <img class="flyer" src="antojados-landing.png" alt="Antojados: El verdadero sabor venezolano, menú, promoción y contacto">
+  <img class="flyer" src="antojados-landing.png" alt="Antojados">
+
+  <section class="promo-editable">
+    <div class="promo-badge">⭐ PROMOCIÓN DESTACADA</div>
+    <h2 id="promoTitulo">Combo Antojados</h2>
+    <p id="promoDescripcion">Arepa + Bebida + Tequeños</p>
+    <div class="promo-price" id="promoPrecio">$8.500</div>
+    <div class="mini-btn">VER MÁS PROMOCIONES ➜</div>
+  </section>
 
   <a class="hotspot promo" id="promo" href="#">Promociones</a>
-
   <a class="hotspot instagram" id="instagram" href="#">Instagram</a>
   <a class="hotspot facebook" id="facebook" href="#">Facebook</a>
   <a class="hotspot tiktok" id="tiktok" href="#">TikTok</a>
   <a class="hotspot share" id="share" href="#">Compartir</a>
-
   <a class="hotspot whatsapp-main" id="whatsappMain" href="#">WhatsApp</a>
   <a class="hotspot call" id="call" href="#">Llamar</a>
   <a class="hotspot contact" href="antojados.vcf">Guardar contacto</a>
-
   <a class="hotspot arepas" id="arepas" href="#">Arepas</a>
   <a class="hotspot tequenos" id="tequenos" href="#">Tequeños</a>
   <a class="hotspot burgers" id="burgers" href="#">Burgers</a>
   <a class="hotspot cachapas" id="cachapas" href="#">Cachapas</a>
   <a class="hotspot bebidas" id="bebidas" href="#">Bebidas</a>
-
   <a class="hotspot menu" id="menu" href="#">Menú completo</a>
   <a class="hotspot map" id="map" href="#">Mapa</a>
   <a class="whatsapp-float" id="whatsappFloat" href="#">WhatsApp flotante</a>
@@ -97,65 +88,48 @@ const datosDefault = {
   telefono: "1158393099",
   telefonoLink: "+541158393099",
   whatsapp: "541158393099",
-  instagram: "@antojados.ar",
   instagramUrl: "https://www.instagram.com/antojados.ar",
-  facebook: "Antojados",
   facebookUrl: "https://www.facebook.com/Antojados",
-  tiktok: "@antojados.ar",
   tiktokUrl: "https://www.tiktok.com/@antojados.ar",
-  direccion: "Av. Balbín 1646, San Miguel",
   mapaUrl: "https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel",
-  promo: {
-    titulo: "Combo Antojados",
-    descripcion: "Arepa + Bebida + Tequeños",
-    precio: "$8.500"
-  }
+  promo: {titulo:"Combo Antojados",descripcion:"Arepa + Bebida + Tequeños",precio:"$8.500"}
 };
 
-function wa(numero, texto){
-  return "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
-}
+function wa(numero,texto){return "https://wa.me/"+numero+"?text="+encodeURIComponent(texto)}
 
 function aplicarDatos(datos){
-  const d = {
-    ...datosDefault,
-    ...datos,
-    promo: {...datosDefault.promo, ...(datos.promo || {})}
-  };
+  const d={...datosDefault,...datos,promo:{...datosDefault.promo,...(datos.promo||{})}};
 
-  const whatsappDirecto = "https://wa.me/" + d.whatsapp;
-
-  if ((d.estado || "").toLowerCase() === "cerrado"){
-    window.location.replace(whatsappDirecto);
+  if((d.estado||"").toLowerCase()==="cerrado"){
+    window.location.replace("https://wa.me/"+d.whatsapp);
     return;
   }
 
-  document.getElementById("promo").href = wa(d.whatsapp, "Hola Antojados, quiero ver las promociones");
-  document.getElementById("whatsappMain").href = wa(d.whatsapp, "Hola Antojados, quiero hacer un pedido");
-  document.getElementById("whatsappFloat").href = wa(d.whatsapp, "Hola Antojados, quiero hacer un pedido");
-  document.getElementById("call").href = "tel:" + d.telefonoLink;
+  document.getElementById("promoTitulo").textContent=d.promo.titulo;
+  document.getElementById("promoDescripcion").textContent=d.promo.descripcion;
+  document.getElementById("promoPrecio").textContent=d.promo.precio;
 
-  document.getElementById("instagram").href = d.instagramUrl;
-  document.getElementById("facebook").href = d.facebookUrl;
-  document.getElementById("tiktok").href = d.tiktokUrl;
-  document.getElementById("map").href = d.mapaUrl;
+  document.getElementById("promo").href=wa(d.whatsapp,"Hola Antojados, quiero ver las promociones");
+  document.getElementById("whatsappMain").href=wa(d.whatsapp,"Hola Antojados, quiero hacer un pedido");
+  document.getElementById("whatsappFloat").href=wa(d.whatsapp,"Hola Antojados, quiero hacer un pedido");
+  document.getElementById("call").href="tel:"+d.telefonoLink;
 
-  document.getElementById("arepas").href = wa(d.whatsapp, "Hola Antojados, quiero consultar por Arepas");
-  document.getElementById("tequenos").href = wa(d.whatsapp, "Hola Antojados, quiero consultar por Tequeños");
-  document.getElementById("burgers").href = wa(d.whatsapp, "Hola Antojados, quiero consultar por Burgers");
-  document.getElementById("cachapas").href = wa(d.whatsapp, "Hola Antojados, quiero consultar por Cachapas");
-  document.getElementById("bebidas").href = wa(d.whatsapp, "Hola Antojados, quiero consultar por Bebidas");
-  document.getElementById("menu").href = wa(d.whatsapp, "Hola Antojados, quiero ver el menú completo");
+  document.getElementById("instagram").href=d.instagramUrl;
+  document.getElementById("facebook").href=d.facebookUrl;
+  document.getElementById("tiktok").href=d.tiktokUrl;
+  document.getElementById("map").href=d.mapaUrl;
 
-  const url = "https://dimas21093639-ux.github.io/-qr-dinamico/";
-  document.getElementById("share").href = "https://wa.me/?text=" + encodeURIComponent("Conocé Antojados 🇻🇪 " + url);
+  document.getElementById("arepas").href=wa(d.whatsapp,"Hola Antojados, quiero consultar por Arepas");
+  document.getElementById("tequenos").href=wa(d.whatsapp,"Hola Antojados, quiero consultar por Tequeños");
+  document.getElementById("burgers").href=wa(d.whatsapp,"Hola Antojados, quiero consultar por Burgers");
+  document.getElementById("cachapas").href=wa(d.whatsapp,"Hola Antojados, quiero consultar por Cachapas");
+  document.getElementById("bebidas").href=wa(d.whatsapp,"Hola Antojados, quiero consultar por Bebidas");
+  document.getElementById("menu").href=wa(d.whatsapp,"Hola Antojados, quiero ver el menú completo");
+
+  document.getElementById("share").href="https://wa.me/?text="+encodeURIComponent("Conocé Antojados 🇻🇪 https://dimas21093639-ux.github.io/-qr-dinamico/");
 }
 
-fetch("datos.json?nocache=" + Date.now())
-  .then(r => r.json())
-  .then(aplicarDatos)
-  .catch(() => aplicarDatos(datosDefault));
+fetch("datos.json?nocache="+Date.now()).then(r=>r.json()).then(aplicarDatos).catch(()=>aplicarDatos(datosDefault));
 </script>
-
 </body>
 </html>
