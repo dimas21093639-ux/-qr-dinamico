@@ -5,53 +5,157 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Antojados | Sabor Venezolano</title>
 <style>
-  *{box-sizing:border-box}
-  body{margin:0;background:#020b0f;font-family:Arial,sans-serif;display:flex;justify-content:center;}
-  .page{position:relative;width:100%;max-width:520px;background:#020b0f;}
-  .flyer{width:100%;display:block;}
-  a.hotspot{position:absolute;display:block;border-radius:14px;text-indent:-9999px;overflow:hidden;}
-  a.hotspot:focus{outline:3px solid #fff;outline-offset:2px;}
-  .promo{left:6.7%;top:48.0%;width:27.5%;height:3.1%;}
-  .instagram{left:69.5%;top:34.4%;width:23.7%;height:4.3%;}
-  .facebook{left:69.5%;top:39.3%;width:23.7%;height:4.3%;}
-  .tiktok{left:69.5%;top:44.1%;width:23.7%;height:4.3%;}
-  .share{left:68.6%;top:48.8%;width:24.8%;height:3.1%;}
-  .whatsapp-main{left:4.4%;top:53.6%;width:30.1%;height:5.6%;}
-  .call{left:36.0%;top:53.6%;width:27.9%;height:5.6%;}
-  .contact{left:65.4%;top:53.6%;width:30.0%;height:5.6%;}
-  .arepas{left:6.2%;top:64.1%;width:16.3%;height:11.4%;}
-  .tequenos{left:24.4%;top:64.1%;width:16.3%;height:11.4%;}
-  .burgers{left:42.0%;top:64.1%;width:16.3%;height:11.4%;}
-  .cachapas{left:60.0%;top:64.1%;width:16.3%;height:11.4%;}
-  .bebidas{left:78.0%;top:64.1%;width:16.3%;height:11.4%;}
-  .menu{left:35.2%;top:76.4%;width:29.0%;height:3.4%;}
-  .map{left:38.1%;top:88.0%;width:23.0%;height:3.2%;}
-  .whatsapp-float{right:3.8%;bottom:3.3%;width:14.5%;height:9.8%;border-radius:50%;position:absolute;display:block;text-indent:-9999px;}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#020b0f;
+  display:flex;
+  justify-content:center;
+  font-family:Arial, sans-serif;
+}
+.page{
+  position:relative;
+  width:100%;
+  max-width:520px;
+  background:#020b0f;
+}
+.flyer{
+  width:100%;
+  display:block;
+}
+.hotspot{
+  position:absolute;
+  display:block;
+  border-radius:14px;
+  text-indent:-9999px;
+  overflow:hidden;
+}
+.hotspot:focus{
+  outline:3px solid #fff;
+  outline-offset:2px;
+}
+
+/* ZONAS CLICKEABLES SOBRE EL DISEÑO */
+.promo{left:6.7%;top:48.0%;width:27.5%;height:3.1%}
+.instagram{left:69.5%;top:34.4%;width:23.7%;height:4.3%}
+.facebook{left:69.5%;top:39.3%;width:23.7%;height:4.3%}
+.tiktok{left:69.5%;top:44.1%;width:23.7%;height:4.3%}
+.share{left:68.6%;top:48.8%;width:24.8%;height:3.1%}
+.whatsapp-main{left:4.4%;top:53.6%;width:30.1%;height:5.6%}
+.call{left:36.0%;top:53.6%;width:27.9%;height:5.6%}
+.contact{left:65.4%;top:53.6%;width:30.0%;height:5.6%}
+.arepas{left:6.2%;top:64.1%;width:16.3%;height:11.4%}
+.tequenos{left:24.4%;top:64.1%;width:16.3%;height:11.4%}
+.burgers{left:42.0%;top:64.1%;width:16.3%;height:11.4%}
+.cachapas{left:60.0%;top:64.1%;width:16.3%;height:11.4%}
+.bebidas{left:78.0%;top:64.1%;width:16.3%;height:11.4%}
+.menu{left:35.2%;top:76.4%;width:29.0%;height:3.4%}
+.map{left:38.1%;top:88.0%;width:23.0%;height:3.2%}
+.whatsapp-float{
+  right:3.8%;
+  bottom:3.3%;
+  width:14.5%;
+  height:9.8%;
+  border-radius:50%;
+  position:absolute;
+  display:block;
+  text-indent:-9999px;
+  overflow:hidden;
+}
 </style>
 </head>
 <body>
+
 <main class="page" aria-label="Antojados - Sabor Venezolano">
-  <img class="flyer" src="antojados-landing.png" alt="Antojados: El verdadero sabor venezolano, menú, promoción y contactos" />
+  <img class="flyer" src="antojados-landing.png" alt="Antojados: El verdadero sabor venezolano, menú, promoción y contacto">
 
-  <a class="hotspot promo" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20ver%20las%20promociones" aria-label="Ver más promociones">Promociones</a>
-  <a class="hotspot instagram" href="https://www.instagram.com/antojados.ar" aria-label="Abrir Instagram">Instagram</a>
-  <a class="hotspot facebook" href="https://www.facebook.com/Antojados" aria-label="Abrir Facebook">Facebook</a>
-  <a class="hotspot tiktok" href="https://www.tiktok.com/@antojados.ar" aria-label="Abrir TikTok">TikTok</a>
-  <a class="hotspot share" href="https://wa.me/?text=Conoc%C3%A9%20Antojados%20%F0%9F%87%BB%F0%9F%87%AA%20https%3A%2F%2Fdimas21093639-ux.github.io%2F-qr-dinamico%2F" aria-label="Compartir por WhatsApp">Compartir</a>
+  <a class="hotspot promo" id="promo" href="#">Promociones</a>
 
-  <a class="hotspot whatsapp-main" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20hacer%20un%20pedido" aria-label="Pedir por WhatsApp">WhatsApp</a>
-  <a class="hotspot call" href="tel:+541158393099" aria-label="Llamar a Antojados">Llamar</a>
-  <a class="hotspot contact" href="antojados.vcf" aria-label="Guardar contacto">Guardar contacto</a>
+  <a class="hotspot instagram" id="instagram" href="#">Instagram</a>
+  <a class="hotspot facebook" id="facebook" href="#">Facebook</a>
+  <a class="hotspot tiktok" id="tiktok" href="#">TikTok</a>
+  <a class="hotspot share" id="share" href="#">Compartir</a>
 
-  <a class="hotspot arepas" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Arepas" aria-label="Consultar arepas">Arepas</a>
-  <a class="hotspot tequenos" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Teque%C3%B1os" aria-label="Consultar tequeños">Tequeños</a>
-  <a class="hotspot burgers" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Burgers" aria-label="Consultar burgers">Burgers</a>
-  <a class="hotspot cachapas" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Cachapas" aria-label="Consultar cachapas">Cachapas</a>
-  <a class="hotspot bebidas" href="https://wa.me/541158393099?text=Hola%2C%20quiero%20consultar%20por%20Bebidas" aria-label="Consultar bebidas">Bebidas</a>
-  <a class="hotspot menu" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20ver%20el%20men%C3%BA%20completo" aria-label="Ver menú completo">Menú completo</a>
+  <a class="hotspot whatsapp-main" id="whatsappMain" href="#">WhatsApp</a>
+  <a class="hotspot call" id="call" href="#">Llamar</a>
+  <a class="hotspot contact" href="antojados.vcf">Guardar contacto</a>
 
-  <a class="hotspot map" href="https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel" aria-label="Ver ubicación en Google Maps">Mapa</a>
-  <a class="whatsapp-float" href="https://wa.me/541158393099?text=Hola%20Antojados%2C%20quiero%20hacer%20un%20pedido" aria-label="Pedir ahora por WhatsApp">Pedir ahora</a>
+  <a class="hotspot arepas" id="arepas" href="#">Arepas</a>
+  <a class="hotspot tequenos" id="tequenos" href="#">Tequeños</a>
+  <a class="hotspot burgers" id="burgers" href="#">Burgers</a>
+  <a class="hotspot cachapas" id="cachapas" href="#">Cachapas</a>
+  <a class="hotspot bebidas" id="bebidas" href="#">Bebidas</a>
+
+  <a class="hotspot menu" id="menu" href="#">Menú completo</a>
+  <a class="hotspot map" id="map" href="#">Mapa</a>
+  <a class="whatsapp-float" id="whatsappFloat" href="#">WhatsApp flotante</a>
 </main>
+
+<script>
+const datosDefault = {
+  estado: "abierto",
+  telefono: "1158393099",
+  telefonoLink: "+541158393099",
+  whatsapp: "541158393099",
+  instagram: "@antojados.ar",
+  instagramUrl: "https://www.instagram.com/antojados.ar",
+  facebook: "Antojados",
+  facebookUrl: "https://www.facebook.com/Antojados",
+  tiktok: "@antojados.ar",
+  tiktokUrl: "https://www.tiktok.com/@antojados.ar",
+  direccion: "Av. Balbín 1646, San Miguel",
+  mapaUrl: "https://maps.google.com/?q=Av.+Balbin+1646+San+Miguel",
+  promo: {
+    titulo: "Combo Antojados",
+    descripcion: "Arepa + Bebida + Tequeños",
+    precio: "$8.500"
+  }
+};
+
+function wa(numero, texto){
+  return "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
+}
+
+function aplicarDatos(datos){
+  const d = {
+    ...datosDefault,
+    ...datos,
+    promo: {...datosDefault.promo, ...(datos.promo || {})}
+  };
+
+  const whatsappDirecto = "https://wa.me/" + d.whatsapp;
+
+  if ((d.estado || "").toLowerCase() === "cerrado"){
+    window.location.replace(whatsappDirecto);
+    return;
+  }
+
+  document.getElementById("promo").href = wa(d.whatsapp, "Hola Antojados, quiero ver las promociones");
+  document.getElementById("whatsappMain").href = wa(d.whatsapp, "Hola Antojados, quiero hacer un pedido");
+  document.getElementById("whatsappFloat").href = wa(d.whatsapp, "Hola Antojados, quiero hacer un pedido");
+  document.getElementById("call").href = "tel:" + d.telefonoLink;
+
+  document.getElementById("instagram").href = d.instagramUrl;
+  document.getElementById("facebook").href = d.facebookUrl;
+  document.getElementById("tiktok").href = d.tiktokUrl;
+  document.getElementById("map").href = d.mapaUrl;
+
+  document.getElementById("arepas").href = wa(d.whatsapp, "Hola Antojados, quiero consultar por Arepas");
+  document.getElementById("tequenos").href = wa(d.whatsapp, "Hola Antojados, quiero consultar por Tequeños");
+  document.getElementById("burgers").href = wa(d.whatsapp, "Hola Antojados, quiero consultar por Burgers");
+  document.getElementById("cachapas").href = wa(d.whatsapp, "Hola Antojados, quiero consultar por Cachapas");
+  document.getElementById("bebidas").href = wa(d.whatsapp, "Hola Antojados, quiero consultar por Bebidas");
+  document.getElementById("menu").href = wa(d.whatsapp, "Hola Antojados, quiero ver el menú completo");
+
+  const url = "https://dimas21093639-ux.github.io/-qr-dinamico/";
+  document.getElementById("share").href = "https://wa.me/?text=" + encodeURIComponent("Conocé Antojados 🇻🇪 " + url);
+}
+
+fetch("datos.json?nocache=" + Date.now())
+  .then(r => r.json())
+  .then(aplicarDatos)
+  .catch(() => aplicarDatos(datosDefault));
+</script>
+
 </body>
 </html>
